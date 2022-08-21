@@ -6,11 +6,12 @@
    
 
    //products
-    const getProducts = fetch("http://localhost:5000/products")
-    getProducts
-    .then((res) =>{
-        return res.json()
-    })
+  let fetchProducts = async () => {
+    const res = await fetch("http://localhost:5000/products");
+    const resProducts = await res.json();
+    return resProducts;
+}
+fetchProducts()
     .then((jsData) =>{
     let prodData = jsData
     prodData.map( x => {
@@ -23,15 +24,15 @@
         console.error(err);
     });
 
-   
 
 
 //fruits
-    const getFruits = fetch("http://localhost:5000/products/fruits")
-    getFruits
-    .then((res) =>{
-        return res.json()
-    })
+let fetchFruits  = async () => {
+    const res = await fetch("http://localhost:5000/products/fruits");
+    const resFruits = await res.json();
+    return resFruits;
+}
+fetchFruits()
     .then((jsData) =>{
     let fruitData = jsData
     fruitData.map( x => {
@@ -44,15 +45,15 @@
         console.error(err);
     })
 
- 
 
 
  //vegetables
- const getVegatables = fetch("http://localhost:5000/products/vegetables")
- getVegatables
- .then((res) =>{
-     return res.json()
- })
+ let fetchVegatables  = async () => {
+    const res = await fetch("http://localhost:5000/products/fruits");
+    const resVegatables = await res.json();
+    return resVegatables;
+}
+fetchVegatables()
  .then((jsData) =>{
  let vegData = jsData
  vegData.map( x => {
