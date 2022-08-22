@@ -22,7 +22,7 @@ fetchProducts()
     })
     .catch((err) => {
         console.error(err);
-    });
+    })
 
 
 
@@ -39,7 +39,7 @@ fetchFruits()
         let li = document.createElement('li');
         li.innerHTML = `${x.name}`;
         fruits.appendChild(li);
-    });
+    })
     })
     .catch((err) => {
         console.error(err);
@@ -60,7 +60,7 @@ fetchVegatables()
      let li = document.createElement('li');
      li.innerHTML = `${x.name}`;
      vegetables.appendChild(li);
- });
+ })
  })
  .catch((err) => {
      console.error(err);
