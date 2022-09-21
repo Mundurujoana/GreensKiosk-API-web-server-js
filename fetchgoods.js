@@ -49,7 +49,7 @@ fetchFruits()
 
  //vegetables
  let fetchVegatables  = async () => {
-    const res = await fetch("http://localhost:5000/products/fruits");
+    const res = await fetch("http://localhost:5000/products/vegetables");
     const resVegatables = await res.json();
     return resVegatables;
 }
